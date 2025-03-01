@@ -39,7 +39,6 @@ class EventController extends Controller
 
             $event = Event::create($validated);
         }catch(Exception $e){
-            dd($e);
             return response()->json(
                 ['msg' => 'Parameters not valid or event already registered'],
                  Response::HTTP_BAD_REQUEST
